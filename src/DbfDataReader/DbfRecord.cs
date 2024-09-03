@@ -138,8 +138,10 @@ namespace DbfDataReader
             try
             {
                 var value = dbfValue.GetValue();
-                if (value is null)
-                    throw new SqlNullValueException($"Data is Null. This method or property cannot be called on Null values. Ordinal {ordinal}");
+
+                //if (value is null)
+                //    throw new SqlNullValueException($"Data is Null. This method or property cannot be called on Null values. Ordinal {ordinal}");
+
                 return (T) value;
             }
             catch (InvalidCastException)

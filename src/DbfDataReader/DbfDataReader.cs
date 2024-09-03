@@ -86,7 +86,7 @@ namespace DbfDataReader
 
         public T? GetNullableValue<T>(int ordinal) where T : struct
         {
-            return GetValue<T>(ordinal);
+            return DbfRecord.GetValue<T?>(ordinal);
         }
 
         public override bool GetBoolean(int ordinal)
